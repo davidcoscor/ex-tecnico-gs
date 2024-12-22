@@ -1,0 +1,79 @@
+### 3.1 ###
+Número de reads mapeadas: 802979
+Número de reads não mapeadas: 0
+
+Número de variantes: 83
+Número de variantes com qualidade > 100: 79
+Número de variantes com profundidade > 50: 81
+Ti/Tv: 2.26
+
+Número de variantes por gene: 
+      3 .
+     11 APC:324
+      3 ATM:472
+      4 ATM:472|C11orf65:160140
+      1 AXIN2:8313
+      2 BLM:641
+      3 CDH1:999
+      1 CHEK2:11200
+      3 CTNNA1:1495
+      2 DHFR:1719|MSH3:4437
+      2 GALNT12:79695
+      2 GREM1:26585
+      4 MLH1:4292
+      1 MSH2:4436
+      4 MSH3:4437
+      8 MSH6:2956
+      3 MUTYH:4595
+      1 NTHL1:4913
+      2 PMS2:5395
+      7 POLD1:5424
+      2 POLE:5426
+      2 POLE:5426|LOC130009266:130009266
+      1 RNF43:54894
+      5 RPS20:6224
+      1 RPS20:6224|SNORD54:26795
+      1 STK11:6794
+      4 TP53:7157
+
+Número de variantes por gene com qualidade > 100 e profundidade > 50: 
+      3 .
+     11 APC:324
+      2 ATM:472
+      4 ATM:472|C11orf65:160140
+      1 AXIN2:8313
+      2 BLM:641
+      3 CDH1:999
+      1 CHEK2:11200
+      3 CTNNA1:1495
+      1 DHFR:1719|MSH3:4437
+      2 GALNT12:79695
+      2 GREM1:26585
+      4 MLH1:4292
+      1 MSH2:4436
+      4 MSH3:4437
+      8 MSH6:2956
+      3 MUTYH:4595
+      1 NTHL1:4913
+      2 PMS2:5395
+      5 POLD1:5424
+      2 POLE:5426
+      2 POLE:5426|LOC130009266:130009266
+      1 RNF43:54894
+      5 RPS20:6224
+      1 RPS20:6224|SNORD54:26795
+      1 STK11:6794
+      4 TP53:7157
+
+### 3.2. ###
+Após a filtragem das variantes por qualidade, uma abordagem para identificar variantes de interesse clínico, pode incluir os seguintes passos:
+1. Anotação funcional das variantes (utilizando as ferramentas descritas na pipeline)
+2. Verificar quais as variantes com relevância clínica, analisando o ficheiro com as variantes anotadas, assumindo que a ferramenta utilizada utilizou informação de bases de dados como a ClinVar
+3. Eventualmente outros passos de filtragem (por exemplo, frequência na população, doença em causa, etc)
+4. Fazer confirmação bibliográfica das variantes encontradas
+
+### 3.3. ###
+Executando o script src/3_3.sh (que gera o ficheiro ficheiros_Amostra_A/AMOSTRA_A_NTHL1.vcf), que contém as variantes patogénicas identificadas para o gene NTHL1, verifica-se que existe de uma variante patogénica G>A. Para confirmar se esta corresponde à variante c.244C>T p.(Gln82*), foi feita uma pesquisa na ClinVar pelo ID 192319 (obtido da INFO no ficheiro VCF), confirmando-se que corresponde à mesma variante (só que proveniente da cadeia reversa).
+- As coordenadas genómicas desta variante são cromossoma 16, posição 2096239, como é visível no ficheiro VCF.
+- A variante encontra-se em heterozigotia, como se pode confirmar no campo FORMAT/GT, cujo valor é 0/1, confirmando que a variante só está presente num dos alelos.
+- A variante é patogénica e está relacionada com as doenças: Hereditary cancer-predisposing syndrome, Familial adenomatous polyposis 3 e NTHL1-related disorder. Esta informação é retirada dos campos INFO/CLASSIFICATION e INFO/DISEASE
