@@ -1,3 +1,6 @@
+### Importante
+Incluir no diretório /ficheiros_Amostra_A, os ficheiros fornecidos com o enunciado no diretório com o mesmo nome.
+
 ### Execução da Imagem Docker
 Para executar a imagem docker, a partir deste repositório:
 ```bash
