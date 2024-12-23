@@ -4,8 +4,8 @@ Incluir no diretório /ficheiros_Amostra_A, os ficheiros fornecidos com o enunci
 ### Execução da Imagem Docker
 Para executar a imagem docker, a partir deste repositório:
 ```bash
-git clone https://github.com/davidcoscor/vari-gene.git
-cd vari-gene
+git clone https://github.com/davidcoscor/ex-tecnico-gs.git
+cd ex-tecnico-gs
 docker build -t vari-gene .
 docker run -it vari-gene
 ```
